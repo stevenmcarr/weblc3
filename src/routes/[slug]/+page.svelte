@@ -13,6 +13,7 @@
     import editorDocs from '../../docs/editor.yaml'
     import simulatorDocs from '../../docs/simulator.yaml'
     import "../../app.css"
+    import { base } from '$app/paths'
 
     // Set up
     toggleHelp.set(false) // Close modal if open
@@ -62,7 +63,7 @@
                 <p id="footnote" aria-label="Extra information">{footnote}</p>
             {/if}
         </div>
-        <a id="toHome" href='/'> Return to homepage </a>
+        <a id="toHome" href='{base}/'> Return to homepage </a>
     </section>
 </div>
 

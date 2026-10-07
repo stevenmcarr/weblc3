@@ -14,6 +14,7 @@ import Messages from "./simMessages";
 import AsciiDecoder from "./asciiDecoder";
 import LC3Worker from '$lib/simWorker?worker';
 import ARMWorker from '$lib/armSimWorker?worker';
+import { base } from '$app/paths';
 
 // Used to tell which type of simulator worker to create
 enum FileType {
@@ -134,13 +135,13 @@ export default class Simulator
         let asmResult;
         if (type == FileType.ARM)
         {
-            const res = await fetch('/os/lc3_arm_os.s?raw');
+            const res = await fetch(`${base}/os/lc3_arm_os.s?raw`);
             const src = await res.text();
             asmResult = await ARMAssembler.assemble(src, false);
         }
         else
         {
-            const res = await fetch('/os/lc3_os.asm?raw');
+            const res = await fetch(`${base}/os/lc3_os.asm?raw`);
             const src = await res.text();
             asmResult = await Assembler.assemble(src, false);
         }

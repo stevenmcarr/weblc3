@@ -9,12 +9,14 @@
     export let footnote = ""
     export let featureHeight = "25vh"
 
+    import { base } from '$app/paths'
+
     $: slug = title.replaceAll(' ','-')
 
 </script>
 
 <div id="docs" aria-labelledby="help">
-    <a href="/{slug}" aria-label="Read as full page">
+    <a href="{base}/{slug}" aria-label="Read as full page">
         <h2 class="workSans" role="definition" aria-label="{title} page"> {title} </h2>
     </a>
     <div id="featureCompo" style="height:{featureHeight};" aria-label="Featured component for visual aid" aria-readonly="true">

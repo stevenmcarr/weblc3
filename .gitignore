@@ -109,3 +109,4 @@ dist
 
 # Mac folder metadata
 **/.DS_Store
+/build

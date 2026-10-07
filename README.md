@@ -1,3 +1,12 @@
+> **About this copy.** This is a copy of
+> [aidan-garvey/WebLC3](https://github.com/aidan-garvey/WebLC3) (MIT License),
+> changed so it can be served as a static site from GitHub Pages:
+> `@sveltejs/adapter-static` instead of `adapter-node`, paths that honor the
+> `BASE_PATH` the site is served under, and
+> [coi-serviceworker](https://github.com/gzuidhof/coi-serviceworker) (MIT) to
+> supply the cross-origin isolation headers the simulator needs. Run
+> `./deploy.sh` to build it and publish it to the `gh-pages` branch.
+
 ![WebLC3 banner](./static/weblc3_banner.png)  
 
 ## Overview
