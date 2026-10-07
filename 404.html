@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width,initial-scale=1'>
+        <meta property="og:title" content="WebLC3 Simulator"/>
+        <meta property="og:image" content="https://github.com/aidan-garvey/WebLC3/blob/main/static/weblc3_preview.png" />
+        <meta property="og:description" content="Web-based editor and simulator for Little Computer 3 (LC-3)" />
+        <meta property="og:url" content="https://lc3.cs.umanitoba.ca/" />
+        <meta property="og:image:width" content="1280" />
+        <meta property="og:image:height" content="640" />
+
+        <title> WebLC3 Simulator </title>
+
+        <!-- GitHub Pages cannot send the cross-origin isolation headers the
+             simulator needs for SharedArrayBuffer; this service worker adds
+             them (https://github.com/gzuidhof/coi-serviceworker, MIT). -->
+        <script src="/weblc3/coi-serviceworker.js"></script>
+
+		<link rel="icon" href="/weblc3/favicon.png" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+		
+		<link rel="modulepreload" href="/weblc3/_app/immutable/entry/start.d7c6280e.js">
+		<link rel="modulepreload" href="/weblc3/_app/immutable/chunks/index.cbec58df.js">
+		<link rel="modulepreload" href="/weblc3/_app/immutable/chunks/singletons.a01d0a58.js">
+		<link rel="modulepreload" href="/weblc3/_app/immutable/chunks/paths.52f46c12.js">
+		<link rel="modulepreload" href="/weblc3/_app/immutable/entry/app.e2c25f84.js">
+		<link rel="modulepreload" href="/weblc3/_app/immutable/chunks/preload-helper.41c905a7.js">
+	</head>
+	<body class="dark">
+		<div>
+			<script>
+				{
+					__sveltekit_1iq6q8g = {
+						assets: "/weblc3",
+						base: "/weblc3",
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/weblc3/_app/immutable/entry/start.d7c6280e.js"),
+						import("/weblc3/_app/immutable/entry/app.e2c25f84.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+
+		<div id="invisible" style="visibility: hidden; height: 1px;">
+			<div id="container" style="height:inherit;width:inherit;"></div>
+		</div>
+	</body>
+</html>

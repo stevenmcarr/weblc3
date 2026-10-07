@@ -1,0 +1,7 @@
+# Cross-origin isolation headers for hosts that read a _headers file
+# (Netlify, Cloudflare Pages). GitHub Pages ignores this file and relies on
+# coi-serviceworker.js instead.
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Resource-Policy: cross-origin
